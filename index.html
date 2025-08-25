@@ -13,7 +13,7 @@
 <body>
     <main class="main-content">
         <header class="header-banner">
-            <h1 class="main-title">Amigo Secreto<br>Familia González</h1>
+            <h1 class="main-title">Amigo Secreto<br>2025</h1>
             <img src="assets/Kike optimista y ganador - sin fondo - grande.png" alt="Imagen representativa de amigo secreto">
         </header>
         
@@ -23,8 +23,9 @@
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
                 <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
-           
-            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+
+            <div id="contenedor"></div>
+            
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
@@ -32,7 +33,20 @@
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
                 </button>
+                <button class="button-reiniciar" onclick="reiniciar()" aria-label="Reiniciar juego">
+                    Reiniciar sorteo
+                </button>
+                <button class="button-repit" onclick="repetirUltimoSorteo()" aria-label="Repetir sorteo">
+                    Repetir sorteo
+                </button>
+                <button class="button-terminar" onclick="terminar()" aria-label="Terminar juego">
+                    Terminar juego
+                </button>
             </div>
+
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <ul id="listaSorteo" class="name-list" aria-labelledby="listaSorteo" role="list"></ul>
+            
         </section>
     </main>
 
